@@ -131,6 +131,7 @@ library hls-ghc-lib
   build-depends:
       base
     , aeson
+    , apply-refact
     , binary
     , bytestring
     , containers
