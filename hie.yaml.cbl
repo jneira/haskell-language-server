@@ -28,10 +28,10 @@ cradle:
             - path: "./src"
               component: "lib:haskell-language-server"
             
-            - path: "./src/Ide/Plugin/Hlint.hs"
-              component: "lib:hls-ghc-lib"
+            - path: "./hlint-plugin/src/Ide/Plugin/Hlint.hs"
+              component: "lib:hlint-plugin"
 
-            - path: "./.stack-work/"
+            - path: "./dist-newstyle/"
               component: "lib:haskell-language-server"
         
             - path: "./ghcide/src"
