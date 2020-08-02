@@ -209,7 +209,6 @@ executable haskell-language-server
     , filepath
     , process
     , ghc
-     --------------------------------------------------------------
     , ghcide
     , gitrev
     , hashable
