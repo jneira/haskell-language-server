@@ -86,6 +86,7 @@ import qualified Control.Exception             as E
 import           Control.DeepSeq                ( NFData
                                                 , deepseq
                                                 )
+import DynFlags (GeneralFlag(Opt_ExternalInterpreter))
 
 descriptor :: PluginId -> PluginDescriptor
 descriptor plId =
@@ -217,7 +218,7 @@ done, we want to switch back to GhcSessionDeps:
         df <- getSessionDynFlags
         env <- getSession
         df <- liftIO $ setupDynFlagsForGHCiLike env df
-        _lp <- setSessionDynFlags df
+        _lp <- setSessionDynFlags (gopt_set df Opt_ExternalInterpreter)
 
         -- copy the package state to the interactive DynFlags
         idflags <- getInteractiveDynFlags
