@@ -79,13 +79,16 @@ import           Language.Haskell.LSP.Types
 import           Language.Haskell.LSP.VFS       (virtualFileText)
 import           PrelNames                      (pRELUDE)
 import           System.FilePath
-import           System.IO                      (hClose)
+-- import           System.IO                      (hClose)
 import           System.IO.Temp
 import Data.Maybe (catMaybes)
 import qualified Control.Exception             as E
 import           Control.DeepSeq                ( NFData
                                                 , deepseq
                                                 )
+                                                
+import GHCi.ObjLink
+import System.IO
 
 descriptor :: PluginId -> PluginDescriptor
 descriptor plId =
@@ -173,6 +176,11 @@ runEvalCmd lsp state EvalParams {..} = response' $ do
   fp <- handleMaybe "uri" $ uriToFilePath' _uri
   contents <- liftIO $ getVirtualFileFunc lsp $ toNormalizedUri _uri
   text <- handleMaybe "contents" $ virtualFileText <$> contents
+  
+  liftIO $ do
+    hPutStrLn stderr "linking in libm"
+    initObjLinker RetainCAFs
+    loadDLL "libm.so.6" >>= hPrint stderr
 
 {- Note: GhcSessionDeps
 
