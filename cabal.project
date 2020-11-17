@@ -8,6 +8,11 @@ packages:
          ./plugins/hls-explicit-imports-plugin
          ./plugins/hls-retrie-plugin
 
+source-repository-package
+  type: git
+  location: https://github.com/mpickering/apply-refact.git
+  tag: 4fbd3a3a9b408bd31080848feb6b78e13c3eeb6d
+
 tests: true
 
 package *
