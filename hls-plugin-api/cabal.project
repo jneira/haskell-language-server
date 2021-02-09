@@ -1,0 +1,18 @@
+packages: .
+
+constraints:
+  Cabal == 3.4.0.0
+
+allow-newer:
+  regex-tdfa:base,
+  regex-base:base,
+  lens:template-haskell,
+  parallel:base,
+  haskell-lsp:base,
+  haskell-lsp-types:base,
+  hashable:base,
+  time-compat:base,
+  these:base,
+  assoc:base,
+  deepseq:base,
+  hslogger:base
