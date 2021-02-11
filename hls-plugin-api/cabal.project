@@ -1,8 +1,5 @@
 packages: .
 
-constraints:
-  Cabal == 3.4.0.0
-
 allow-newer:
   regex-tdfa:base,
   regex-base:base,
@@ -15,4 +12,5 @@ allow-newer:
   these:base,
   assoc:base,
   deepseq:base,
-  hslogger:base
+  hslogger:base,
+  lens:Cabal
