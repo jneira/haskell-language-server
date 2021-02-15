@@ -1,0 +1,33 @@
+packages: .
+
+allow-newer:
+  -- hls-plugin-api
+  regex-tdfa:base,
+  regex-base:base,
+  lens:template-haskell,
+  parallel:base,
+  haskell-lsp:base,
+  haskell-lsp-types:base,
+  hashable:base,
+  time-compat:base,
+  these:base,
+  assoc:base,
+  deepseq:base,
+  hslogger:base,
+  lens:Cabal,
+
+  split:base,
+  cryptohash-sha1:base,
+  zlib:base,
+  hie-bios:base,
+  hie-bios:ghc,
+  retrie:base,
+  retrie:ghc,
+  ghc-trace-events:base,
+  hiedb:base,
+  hie-compat:base,
+  haddock-library:base,
+  retrie:async,
+  async:base,
+  hashable:integer-gmp,
+  ghc-paths:Cabal
