@@ -346,7 +346,6 @@ It should take around 15 minutes and the results will be stored in the `bench-re
 
 More details in [bench/README](bench/README.md)
 
-
 ## History and relationship to other Haskell IDE's
 
 The teams behind this project and the [`haskell-ide-engine`](https://github.com/haskell/haskell-ide-engine#readme) have agreed to join forces under the [`haskell-language-server` project](https://github.com/haskell/haskell-language-server), see the [original announcement](https://neilmitchell.blogspot.com/2020/01/one-haskell-ide-to-rule-them-all.html). The technical work is ongoing, with the likely model being that this project serves as the core, while plugins and integrations are kept in the [`haskell-language-server` project](https://github.com/haskell/haskell-language-server).
