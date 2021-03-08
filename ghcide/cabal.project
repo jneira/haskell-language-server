@@ -1,5 +1,15 @@
 packages: .
 
+source-repository-package
+    type: git
+    location: https://github.com/jneira/hie-bios
+    tag: 9b1445ab5efcabfad54043fc9b8e50e9d8c5bbf3
+
+source-repository-package
+  type: git
+  location: https://github.com/hsyl20/ghc-api-compat
+  tag: 6178d75772c7d923918dfffa0b1f503dfb36d0a6
+
 allow-newer:
   -- hls-plugin-api
   regex-tdfa:base,
