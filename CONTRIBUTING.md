@@ -84,3 +84,4 @@ An alternative is
 ```bash
 $ cabal run haskell-language-server:func-test -- -p "hlint enables"
 ```
+
